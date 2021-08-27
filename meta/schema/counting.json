@@ -138,6 +138,10 @@
 						"priority": {
 							"type": "number",
 							"description": "For groups with multiple components, we'll use this to order the components"
+						},
+						"props": {
+							"type": "object",
+							"description": "For groups with multiple components, we'll use this to order the components"
 						}
 					},
 					"required": [
