@@ -1,0 +1,57 @@
+{
+	"$id": "/dcic/signature-commons-schema/${API_VERSION}/meta/user_input/user_input.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/${API_VERSION}/core/meta.json"
+		},
+		{
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"up_entities": {
+							"type": "array",
+							"description": "up entities",
+							"items": {
+                "type": "string",
+                "description": "Globally unique identifier referring to the entity.",
+                "format": "uuid"
+              }
+						},
+						"down_entities": {
+							"type": "array",
+							"description": "down entities",
+							"items": {
+                "type": "string",
+                "description": "Globally unique identifier referring to the entity.",
+                "format": "uuid"
+              }
+						}
+					},
+					"required": [
+						"up_entities",
+						"down_entities"
+					]
+				},
+        {
+					"type": "object",
+					"properties": {
+						"entities": {
+							"type": "array",
+							"description": "entities",
+							"items": {
+                "type": "string",
+                "description": "Globally unique identifier referring to the entity.",
+                "format": "uuid"
+              }
+						}
+					},
+					"required": [
+						"entities"
+					]
+				}
+			]
+		}
+	]
+}
