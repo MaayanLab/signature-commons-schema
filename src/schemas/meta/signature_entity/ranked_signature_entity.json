@@ -1,0 +1,30 @@
+{
+	"$id": "/dcic/signature-commons-schema/${API_VERSION}/meta/signature_entity/ranked_signature_entity.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/${API_VERSION}/core/meta.json"
+		},
+		{
+			"type": "object",
+			"properties": {
+				"rank": {
+					"type": "integer",
+					"description": "rank of the entity"
+				},
+				"score": {
+					"type": "number",
+					"description": "score of the entity"
+				},
+				"score_type": {
+					"type": "string",
+					"description": "type of score, characteristic direction, p-val, etc."
+				}
+			},
+			"required": [
+				"rank",
+				"score"
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/examples.json",
+	"tests": [
+		{
+			"name": "ranked_signature_entity (valid)",
+			"valid": true,
+			"schema": "/dcic/signature-commons-schema/v6/core/signature_entity.json",
+			"data": {
+				"$validator": "/dcic/signature-commons-schema/v6/core/signature_entity.json",
+				"signature": "741281f8-b9bf-4586-8235-af293c2d23d6",
+				"entity": "741281f8-b9bf-4586-8235-af293c2d23d6",
+				"direction": "up",
+				"meta": {
+					"$validator": "/dcic/signature-commons-schema/v6/meta/signature_entity/ranked_signature_entity.json",
+					"rank": 1,
+					"score": 1.5,
+					"score_type": "coefficient"
+				}
+			}
+		},
+		{
+			"name": "ranked_signature_entity (invalid)",
+			"valid": false,
+			"schema": "/dcic/signature-commons-schema/v6/core/signature_entity.json",
+			"data": {
+				"$validator": "/dcic/signature-commons-schema/v6/core/signature_entity.json",
+				"signature": "741281f8-b9bf-4586-8235-af293c2d23d6",
+				"entity": "741281f8-b9bf-4586-8235-af293c2d23d6",
+				"direction": "up",
+				"meta": {
+					"$validator": "/dcic/signature-commons-schema/v6/meta/signature_entity/ranked_signature_entity.json",
+					"rank": 1,
+					"score": "1.5",
+					"score_type": "coefficient"
+				}
+			}
+		}
+	]
+}

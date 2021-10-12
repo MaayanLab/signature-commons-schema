@@ -1,0 +1,39 @@
+{
+	"$id": "/dcic/signature-commons-schema/v6/core/signature_entity.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+	  {
+		"$ref": "/dcic/signature-commons-schema/v6/core/meta.json"
+	  },
+	  {
+		"type": "object",
+		"properties": {
+		  "signature": {
+			"type": "string",
+			"description": "Signature ID"
+		  },
+		  "entity": {
+			"type": "string",
+			"description": "Entity ID"
+		  },
+		  "direction": {
+			"type": "string",
+			"description": "direction of the relationship",
+			"enum": [
+				"up",
+				"down",
+				"-"
+			]
+		  },
+		  "meta": {
+			"$ref": "/dcic/signature-commons-schema/v6/core/meta.json",
+			"description": "Arbitrary validatable metadata describing the library"
+		  }
+		},
+		"required": [
+		  "signature",
+		  "entity"
+		]
+	  }
+	]
+  }
